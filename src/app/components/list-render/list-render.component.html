@@ -1,0 +1,72 @@
+<div class="class">
+    <h1>Rendereização de listas</h1>
+    <br>
+    <p>Outro recurso importante é o loop em listas</p>
+    <p>Para isso vamos precisar de uma propriedade com os itens da listas</p>
+    <p>E no template do componente vamos utilizar o *ngFor;</p>
+    <p>A sintaxe é: *ngFor="let item of items"</p>
+    <p>Desta maneira podemos renderizar template baseado em dados</p>
+    <br>
+    <h2>Animals:</h2>
+    <ul>
+        <li *ngFor="let animal of animals">
+            Nome: {{animal.name}} - tipo: {{animal.type}}
+            <button (click)="showAge(animal)">Show age</button>
+        </li>
+    </ul>
+    <h3>{{ animalDetails }}</h3>
+</div>
+<div class="class">
+    <h1>Utilizando service na rendereização de listas</h1>
+    <br>
+    <p>O service é outra parte fundamental da arquitetura do Angular</p>
+    <p>Geralmente ficam as requisições para as APIs que utilizamos no projeto</p>
+    <p>Precismos criar o service com: ng generate service services/nome</p>
+    <p>Importar no componente e iniciar no construtor</p>
+    <p>Depois é possível acessar os métodos dele</p>
+</div>
+<div class="class">
+    <h1>Requisições HTTP</h1>
+    <br>
+    <p>Vamos realizar requisições HTTP nos nossos services</p>
+    <p>Neste exemplo utilizaremos uma API local para simular as request, com o json-server</p>
+    <p>Por último, é necessário inicializar o módulo HttpClientModule em app.module.ts</p>
+    <br>
+    <ul>
+        <li>Criar arquivo na raiz, chamado db.json (adicionar objeto animais anteriormente utilizado)</li>
+        <li>Instalar npm i json-server</li>
+        <li>Incluir script na pasta package.json: "server": "json-server --watch db.json"</li>
+        <li>Abrir um novo terminal e rodar o comando: npm run server</li>
+        <li>Terá um servidor em modo de escuta exibindo o objeto que está no arquivo db.json</li>
+        <li>Resources: http://localhost:3000/animals</li>
+        <li>Home: http://localhost:3000 </li>
+    </ul>
+</div>
+<div class="class">
+    <h1>Carregando dado individual</h1>
+    <br>
+    <ul>
+        <li *ngFor="let animal of animals">
+            Nome:
+            <a routerLink="/list/{{animal.id}}">{{animal.name}}</a>
+        </li>
+    </ul>
+</div>
+<div class="class">
+    <h1>Deletendo registro</h1>
+    <br>
+    <p>Agora vamos refatorar nossa ação de remover registro com a execução HTTP</p>
+    <p>Criaremos outro método no service;</p>
+    <p>Ajustaremos a maneira que o método da classe do componente é executado</p>
+    <p>Com simples mudanças estaremos interagindo com a API</p>
+    <br>
+    <h2>Animals:</h2>
+    <p>Usando service para remover animal</p>
+    <ul>
+        <li *ngFor="let animal of animals">
+            Nome: {{animal.name}} - tipo: {{animal.type}}
+            <button (click)="showAge(animal)">Show age</button>
+            <button (click)="removeAnimal(animal)">Excluir</button>
+        </li>
+    </ul>
+</div>

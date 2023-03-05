@@ -1,0 +1,34 @@
+{
+  "animals": [
+    {
+      "id": 1,
+      "name": "Bob",
+      "type": "Dog",
+      "age": 8
+    },
+    {
+      "id": 2,
+      "name": "Red",
+      "type": "Cat",
+      "age": 1
+    },
+    {
+      "id": 3,
+      "name": "Sophie",
+      "type": "Cat",
+      "age": 1
+    },
+    {
+      "id": 5,
+      "name": "Cindy",
+      "type": "Cat",
+      "age": 1
+    },
+    {
+      "id": 6,
+      "name": "Pandora",
+      "type": "Dog",
+      "age": 1
+    }
+  ]
+}

@@ -1,1 +1,49 @@
-<h1>Hello World Angular!</h1>
+<br>
+<p>header</p>
+<br>
+<div class="class">
+    <h1>Angular Router!</h1>
+    <p>Nós vamos criar um novo arquivo para declarar nossas rotas</p>
+    <p>Nele vamos importar os módulos RouterModule e Routes</p>
+    <p>Após a definição estas rotas precisam ser importadas em app.module.ts;</p>
+    <p>E por fim no template principal criamos as rotas</p>
+    <p>E substituimos os componentes por router-outlet entre sinal de menor e maior</p>
+</div>
+<nav>
+    <a routerLink="/" style="margin: 5px;">Home</a>
+    <a routerLink="/first-component" style="margin: 5px;">Interpolação de dados</a>
+    <a routerLink="/parent-data" style="margin: 5px;">Compartilhando dados</a>
+    <a routerLink="/directives" style="margin: 5px;">Diretivas</a>
+    <a routerLink="/if-render" style="margin: 5px;">Rendereização Condicional</a>
+    <a routerLink="/events" style="margin: 5px;">Eventos</a>
+    <a routerLink="/emitter" style="margin: 5px;">Emitindo eventos</a>
+    <a routerLink="/list-render" style="margin: 5px;">Rendereização de lista</a>
+    <a routerLink="/list/:id" style="margin: 5px;">Detalhar elemento</a>
+    <a routerLink="/pipes" style="margin: 5px;">Pipes</a>
+    <a routerLink="/two-way-binding" style="margin: 5px;">Two Way Binding</a>
+</nav>
+<br>
+<hr>
+<br>
+<div class="class">
+    <h1>Hello World Angular!</h1>
+</div>
+
+<router-outlet></router-outlet>
+
+<!-- Antes sem o router-outlet
+    <app-first-component></app-first-component>
+    <app-parent-data [name]="userName" [userData]="userData"></app-parent-data>
+    <app-directives></app-directives>
+    <app-if-render></app-if-render>
+    <app-events></app-events>
+    <app-emitter></app-emitter>
+    <app-list-render></app-list-render>
+    <app-pipes></app-pipes>
+    <app-two-way-binding></app-two-way-binding> 
+-->
+<br>
+<hr>
+<br>
+<p>footer</p>
+<br>

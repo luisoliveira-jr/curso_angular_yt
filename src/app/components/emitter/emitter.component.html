@@ -1,0 +1,13 @@
+<div class="class">
+    <h1>Emitindo Eventos</h1>
+    <br>
+    <p>Podemos comunicar eventos de um componente filho para o pai</p>
+    <p>Para isso vamos precisar usar o @Output que vai fazer a saída do evento do componente filho</p>
+    <p>Na tag de invocação do component no template, escolhemos um método para executar quando o evento for emitido</p>
+    <p>Exemplo: (emit)="onEmit()"</p>
+    <p>Importar Output, EventEmitter</p>
+    <br>
+    <h1>O número é: {{myNumber}}</h1>
+    <app-change-number (changeNumber)="onChangeNumber()"></app-change-number>
+
+</div>

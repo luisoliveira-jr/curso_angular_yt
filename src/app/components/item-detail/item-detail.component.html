@@ -1,0 +1,13 @@
+<div class="class">
+    <h1>Carregando dado individual</h1>
+    <p>Para resgatar um dado do banco vamos precisar criar uma rota dinâmica no nosso router</p>
+    <p>Baseado no id do item teremos a seleção de dado no banco, geralmente o id vem pela utilizar</p>
+    <p>Para resgatar parâmetros da URL vamos utilizar o ActivatedRoute, um módulo do Angular</p>
+    <p>A lógica da requisição HTTP ficará no service</p>
+</div>
+<div *ngIf="animal" class="class">
+    <h1>ID: {{animal.id}}</h1>
+    <h1>Nome: {{animal.name}}</h1>
+    <h1>Age: {{animal.age}}</h1>
+    <h1>Type: {{animal.type}}</h1>
+</div>

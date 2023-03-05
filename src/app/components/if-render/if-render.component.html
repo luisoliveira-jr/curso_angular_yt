@@ -1,0 +1,15 @@
+<div class="class">
+    <h1>Rendereização condicional</h1>
+    <br>
+    <p>É possível exibir determinado conteúdo por meio de uma condicional, para isso utilizamos a diretiva ngIf</p>
+    <p>Os valores podem ser dinâmicos (propriedades), mas podemos realizar outros tipos de comparação</p>
+    <p>Há a possibilidade também de imprimir um cenário para validação de falso, com else</p>
+    <br>
+    <div *ngIf="canShow">Estamos mostrando isso porque foi permitido</div>
+    <h2 *ngIf="name === 'Luis'; else nameNotFound">O nome é Matheus</h2>
+    <ng-template #nameNotFound>
+        <div>
+            <h2>O nome não foi encontrado!</h2>
+        </div>
+    </ng-template>
+</div>
